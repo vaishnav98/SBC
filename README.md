@@ -13,18 +13,20 @@ Api for registration :
     authentication.
 
 Api for login :
-"HostIP:1234/user/login" with query parameters {"email":String,
-"password":String}
-Should be a get request.Will get a json web token in return.Use it for
-authentication.
 
-api for pushing notification to the server :
-This is admin authenticated. First copy the token from login or register and create a header in the request,
-called 'x-access-token' and put the token in it.
-"HostIP:1234/api/pushNotification" with parameters {"clubName" : String,
-"heading" : String,
-"content" : String }
-This should be a post request with parameters as JSON.
+    "HostIP:1234/user/login" with query parameters {"email":String,
+    "password":String}
+    Should be a get request.Will get a json web token in return.Use it for
+    authentication.
+
+Api for pushing notification to the server :
+
+    This is admin authenticated. First copy the token from login or register and create a header in the request,
+    called 'x-access-token' and put the token in it.
+    "HostIP:1234/api/pushNotification" with parameters {"clubName" : String,
+    "heading" : String,
+    "content" : String }
+    This should be a post request with parameters as JSON.
 
 Api for geting notification from the server :
 
