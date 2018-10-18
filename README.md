@@ -1,5 +1,5 @@
 # SBC
-
+To run type "node back_end/app.js" in the cloned folder
 API's --------------------------------------------------------------------------------------------------------
 
 To push notifications u need to login as admin:
