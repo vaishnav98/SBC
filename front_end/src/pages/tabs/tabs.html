@@ -1,0 +1,8 @@
+
+<ion-tabs #forumTabs [selectedIndex]="0" (click)="clicked()">
+    <ion-tab tabIcon="md-megaphone" #content tabTitle="Announcements" [root]="threadsPage" tabBadge="{{newThreads}}" tabBadgeStyle="danger"></ion-tab>
+    <ion-tab tabIcon="ios-jet" #content tabTitle="Clubs" [root]="profilePage"></ion-tab>
+    <ion-tab tabIcon="ios-build" #content tabTitle="Facilities" [root]="aboutPage"></ion-tab>
+    <ion-tab tabIcon="ios-call" #content tabTitle="Phonebook" [root]="aboutPage"></ion-tab>
+    <ion-tab tabIcon="information-circle" #content tabTitle="About" [root]="aboutPage"></ion-tab>
+</ion-tabs>

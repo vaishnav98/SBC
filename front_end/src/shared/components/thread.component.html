@@ -1,0 +1,37 @@
+<ion-item text-wrap>
+        <ion-card>
+    
+            <ion-item>
+                <ion-avatar item-left>
+                    <forum-user-avatar [user]="thread.user"></forum-user-avatar>
+                </ion-avatar>
+                <h2>{{thread.user.username}}</h2>
+                <p>{{thread.dateCreated | date:'medium'}}</p>
+            </ion-item>
+    
+            <!--<img src="img/advance-card-bttf.png">-->
+            <div class="thread-card-title wordwrap">
+                {{thread.title}}
+            </div>
+            <div class="thread-card-question wordwrap left-border-primary">
+                {{thread.question}}
+            </div>
+    
+            <ion-row class="left-border-primary">
+                <ion-col>
+                    <button color="primary" clear small (click)="viewComments(thread.key)">
+            <ion-icon name="chat"></ion-icon>
+            <div>{{thread.comments}} Chats</div>
+          </button>
+                </ion-col>
+                <ion-col center text-center>
+                    <ion-note>
+                        {{thread.category}}
+                    </ion-note>
+                    <button ion-button icon-only (click)="shareSheetShare()" color="primary" clear>
+                            <ion-icon class="share-icon" name="share"></ion-icon>
+                          </button>
+                </ion-col>
+            </ion-row>
+        </ion-card>
+    </ion-item>
